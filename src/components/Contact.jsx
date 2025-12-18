@@ -71,8 +71,8 @@ export default function Contact(){
         {/* Download CV Button - Loads immediately */}
         <div className="flex justify-center mb-20 animate-fade-in-scale" style={{ animationDelay: '300ms' }}>
           <a 
-            href={`${process.env.PUBLIC_URL}/Daniel_Edgar_CV.docx`}
-            download="Daniel_Edgar_CV.docx"
+            href={`${process.env.PUBLIC_URL}/Daniel_Edgar_CV.pdf`}
+            download="Daniel_Edgar_CV.pdf"
             className="group relative inline-flex items-center space-x-3 bg-black dark:bg-white text-white dark:text-black px-10 py-5 rounded-full hover:scale-105 transition-all duration-300 text-lg font-medium shadow-lg hover:shadow-2xl"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
