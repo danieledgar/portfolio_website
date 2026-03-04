@@ -22,6 +22,13 @@ const projects = [
     link: 'https://github.com/danieledgar/foodify',
     tech: ['Django', 'Python', 'M-Pesa', 'Web App'],
     category: 'Web App'
+  },
+  {
+    title: 'Verdelle Nails',
+    desc: 'Professional nail salon website with booking system, service showcase, and elegant UI for beauty services.',
+    link: 'https://verdellenails.vercel.app/',
+    tech: ['React', 'Vercel', 'Web Design', 'UI/UX'],
+    category: 'Web App'
   }
 ];
 
@@ -111,10 +118,16 @@ export default function Projects(){
                   <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-gray-700 dark:text-gray-300">
                     <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
                   </svg>
-                ) : (
+                ) : index === 2 ? (
                   // Foodify - Hotel/Building icon
                   <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-gray-700 dark:text-gray-300">
                     <path d="M12 3L2 9v12h20V9l-10-6zm8 16h-4v-3h-3v3H9v-3H6v3H4v-9l8-4.5L20 12v7zm-8-5h-2v-2h2v2zm0-3h-2V9h2v2zm4 3h-2v-2h2v2zm0-3h-2V9h2v2zm-8 0H6V9h2v2zm0 3H6v-2h2v2z"/>
+                  </svg>
+                ) : (
+                  // Verdelle Nails - Nail polish/beauty icon
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-gray-700 dark:text-gray-300">
+                    <path d="M12.7 2.3c-.4-.4-1-.4-1.4 0L9 4.6c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l.6-.6v6.1c-1.2.4-2 1.5-2 2.7v7.3c0 .8.7 1.5 1.5 1.5h3c.8 0 1.5-.7 1.5-1.5v-7.3c0-1.2-.8-2.3-2-2.7V5.4l.6.6c.4.4 1 .4 1.4 0 .4-.4.4-1 0-1.4l-2.3-2.3zM13 14.5c.3 0 .5.2.5.5v6.5h-3V15c0-.3.2-.5.5-.5h2z"/>
+                    <circle cx="12" cy="8" r="1"/>
                   </svg>
                 )}
               </div>
@@ -153,7 +166,9 @@ export default function Projects(){
                   rel="noreferrer"
                   className="inline-flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-all duration-300 group/link"
                 >
-                  <span className="text-sm font-semibold">View on GitHub</span>
+                  <span className="text-sm font-semibold">
+                    {project.link.includes('github.com') ? 'View on GitHub' : 'View Live Site'}
+                  </span>
                   <svg className="w-5 h-5 group-hover/link:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
                   </svg>

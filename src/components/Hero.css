@@ -1,0 +1,176 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+  background: #000000;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-image-placeholder {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.image-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-main {
+  margin-bottom: 2rem;
+}
+
+.hero-name-section {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.first-name,
+.last-name {
+  font-size: clamp(3.5rem, 12vw, 10rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease-out;
+}
+
+.title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.role-tag {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: white;
+  color: black;
+  font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.hero-roles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.role-item {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.role-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.hero-description {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeIn 1.8s ease-out;
+  font-weight: 300;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .hero-badge {
+    font-size: 0.65rem;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .image-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero-roles {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .role-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .role-tag {
+    font-size: 0.65rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
